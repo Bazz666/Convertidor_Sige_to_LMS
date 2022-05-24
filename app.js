@@ -1,17 +1,19 @@
-'use strict';
+
 
 // var createError = require('http-errors');
-const express = require('express');
+const express = require("express");
 const app = express();
-const path = require('path');
+
 // const PORT = process.env.PORT || 5000
 // settings
 // app.set('port', (process.env.PORT || 5000));
+// app.set('views', './src/views');
+app.set('view engine', 'ejs');
 
-app.set("view engine", "ejs");
 //routes
 var routes = require("./routes");
-// static files
+// static files}
+var path = require('path');
 app.use(express.static(path.join(__dirname, "public")));
 // app.set("views", path.join(__dirname, "views"));
 app.get("/", routes);
