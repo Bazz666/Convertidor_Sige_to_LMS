@@ -115,9 +115,7 @@ document.getElementById("button").addEventListener("click", () => {
             item.Login = " ";
             item.Password = " ";
             return item;
-
         });
-        
         
         //Ordenando Datos
         let orderData = [];
@@ -167,5 +165,9 @@ document.getElementById("button").addEventListener("click", () => {
                 <tr>`;
             }
         }
+    
     });};}
 });
+// document.getElementById('#boton3').addEventListener("click", () => {
+//     location.reload();
+// });

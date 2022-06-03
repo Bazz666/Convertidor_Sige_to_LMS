@@ -4,7 +4,7 @@
 const express = require("express");
 const app = express();
 
-// const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 5050
 // settings
 // app.set('port', (process.env.PORT || 5000));
 // app.set('views', './src/views');
@@ -29,5 +29,5 @@ const logger = require('morgan');
 app.use(logger('dev'));
 
 
-app.listen(process.env.PORT || 3003);
-// app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
+// app.listen(process.env.PORT || 3003);
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
