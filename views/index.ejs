@@ -1,104 +1,100 @@
+<!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <meta charset="UTF-8" />
+    <head>
+        <meta charset="UTF-8" />
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Reporte Pleno</title>
-    <meta name="description" content="Plataforma que permite analizar reportería desde Sige y poder procesarla en e-stella">
-    <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
-    <!-- use the latest version -->
-    <script lang="javascript" src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Reporte Pleno</title>
+        <meta name="description" content="Plataforma que permite analizar reportería desde Sige y poder procesarla en e-stella">
+        <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
+        <!-- use the latest version -->
+        <script lang="javascript" src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <script href="https://kit.fontawesome.com/146ca533d2.js" crossorigin="anonymous"></script>
-    <link href="/stylesheets/style.css" rel="stylesheet">
-</head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script href="https://kit.fontawesome.com/146ca533d2.js" crossorigin="anonymous"></script>
+        <link href="/stylesheets/style.css" rel="stylesheet">
+    </head>
 
-<body class="light">
+    <body class="dark">
 
+        <nav class="navbar navbar-expand-lg navbar-light text-left bg-pink  green ">   
+            <a class="navbar-brand" href="#" ><img class="logo-nav" src="images/santillana.png"  height="40" class="d-inline-block align-top" alt="logo santillana"> </a>
+        </nav>
 
-    <div class="row ">
-        <div class="col-xl-8 col-md-6 col-sm-10 mx-auto">
-            <nav class="navbar navbar-expand-lg navbar-light2 text-left">
+        <section>
+            <div class="row pt-4 ">
+                <div class="col-xl-8 col-md-6 col-sm-10 mx-auto">
+                    <!-- Profile widget -->
+                    <div class="shadow rounded overflow-hidden relative">
+                        <h2 class="h1 text-left" id="pageHeaderTitle"></h2>
+                        <article class="postcard dark green">
+                            <a class="postcard__img_link" href="#">
+                                <img class="postcard__img" src="/images/Transform_Excel4.png" alt="Image Title" />
+                            </a>
+                            <div class="postcard__text text-black">
+                                <h1 class=" "><a href="#">Convertidor Planilla Sige</a></h1>
+                                <div class="postcard__subtitle small">
                 
-                <a class="navbar-brand " href="#" ><img class="logo-nav" src="images/santillana.png"  alt="logo santillana"> </a>
+                                </div>
+                                <div class="postcard__bar"></div>
+                                <div class="postcard__preview-txt">Por favor adjunte su informe Sige en formato Excel (extension XLSX para poder leer
+                                    los campos correctamente), luego doble click en "convertir" para procesar y desplegar la tabla de datos.</div>
+                                <ul class="postcard__tagbox">
+                                    <li class="tag__item"> <input class="form-control" type="file" id="input" accept=".xls,.xlsx"></li>
                 
-            </nav>
-            <!-- Profile widget -->
-            <div class="shadow rounded overflow-hidden relative">
-
-                <h2 class="h1 text-left" id="pageHeaderTitle"></h2>
-
-                <article class="postcard light2 green">
-                    <a class="postcard__img_link" href="#">
-                        <img class="postcard__img" src="/images/Transform_Excel4.png" alt="Image Title" />
-                    </a>
-                    <div class="postcard__text text-black">
-                        <h1 class=" "><a href="#">Convertidor Planilla Sige</a></h1>
-                        <div class="postcard__subtitle small">
-        
+                                    <li class="tag__item play green">
+                                        <a href="#"><i class="fas fa-retweet"></i><button class="btn text-white"
+                                                id="button">Convertir</button></a>
+                                    </li>
+                
+                
+                                    <li class="tag__item play green ">
+                                        <a href="#"><i class="fas fa-file-export"></i><button class="btn text-white"
+                                                id="button2">Descargar</button></a>
+                                    </li>
+                
+                                    <li class="tag__item play green ">
+                                        <i class="fas fa-file-export"></i>
+                                        <button class="btn text-white" id="button3" onclick="location.reload()">Limpiar</button></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+                
+                        <div class="col-md-12 postcard dark t green pt-4 green " id="button">
+                            <table class="table text-white text-light container-fluid table-striped  green">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Nivel</th>
+                                        <th scope="col">Grado</th>
+                                        <th scope="col">Grupo</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Apellido Paterno</th>
+                                        <th scope="col">Apellido Materno</th>
+                                        <th scope="col">Sexo</th>
+                                        <th scope="col">Fecha de Nacimiento</th>
+                                        <th scope="col">Login</th>
+                                        <th scope="col">Password</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="res">
+                
+                                </tbody>
+                            </table>
                         </div>
-                        <div class="postcard__bar"></div>
-                        <div class="postcard__preview-txt">Por favor adjunte su informe Sige en formato Excel (extension XLSX para poder leer
-                            los campos correctamente), luego doble click en "convertir" para procesar y desplegar la tabla de datos.</div>
-                        <ul class="postcard__tagbox">
-                            <li class="tag__item"> <input class="form-control" type="file" id="input" accept=".xls,.xlsx"></li>
-        
-                            <li class="tag__item play green">
-                                <a href="#"><i class="fas fa-retweet"></i><button class="btn text-white"
-                                        id="button">Convertir</button></a>
-                            </li>
-        
-        
-                            <li class="tag__item play green ">
-                                <a href="#"><i class="fas fa-file-export"></i><button class="btn text-white"
-                                        id="button2">Descargar</button></a>
-                            </li>
-        
-                            <li class="tag__item play green ">
-                                <i class="fas fa-file-export"></i>
-                                <button class="btn text-white" id="button3" onclick="location.reload()">Limpiar</button></a>
-                            </li>
-                        </ul>
                     </div>
-                </article>
-        
-                <div class="col-md-12 postcard light2 green py-4" id="button">
-                    <table class="table container-fluid table-striped   green">
-                        <thead>
-                            <tr>
-                                <th scope="col">Nivel</th>
-                                <th scope="col">Grado</th>
-                                <th scope="col">Grupo</th>
-                                <th scope="col">Nombre</th>
-                                <th scope="col">Apellido Paterno</th>
-                                <th scope="col">Apellido Materno</th>
-                                <th scope="col">Sexo</th>
-                                <th scope="col">Fecha de Nacimiento</th>
-                                <th scope="col">Login</th>
-                                <th scope="col">Password</th>
-                            </tr>
-                        </thead>
-                        <tbody id="res">
-        
-                        </tbody>
-                    </table>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-
-    
-        
-
+        <footer class="container-fluid bg-pink   text-center" >
+            <img class="logo-footer text-center" src="images/TecLogo3.png" alt="logo-footer">
+            <p class="text-dark text-center"></p>
+        </footer>
         <script src="/javascripts/excel.js"></script>
-        <!-- <script src="public/javascripts/excel.js"></script> -->
-    
-
-</body>
+    </body>
 
 </html>

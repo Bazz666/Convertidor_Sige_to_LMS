@@ -6,9 +6,25 @@ body {
     color: #ffffff;
     text-rendering: optimizeLegibility;
     font-weight: initial;
+    text-align: center;
+    margin: 0;
+    font-family: 'open sans', sans-serif;
+}
+section, footer{
+  margin-top: 4.5rem;
 }
 
+footer {
+  padding: 3.125rem;
+  position: center;
+}
 
+.bg-pink{
+  background-color: #f0ecef;
+}
+.logo-footer{
+  height: 100px;
+}
 .dark {
     background: #110f16;
 }
@@ -42,7 +58,7 @@ a:hover {
     margin: 0 0 2rem 0;
     overflow: hidden;
     position: relative;
-    color: #000000;
+    color: #f8f8f8;
 }
 .postcard.dark {
     background-color: #18151f;
@@ -51,7 +67,7 @@ a:hover {
     background-color: #e1e5ea;
 }
 .postcard .t-dark {
-    color: #18151f;
+    color: #d8d0e9;
 }
 .postcard a {
     color: inherit;
