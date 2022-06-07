@@ -100,6 +100,15 @@ document.getElementById("button").addEventListener("click", () => {
                 item.Grado = "7º- Básico";
             } else if (item.Grado == "8° básico") {
                 item.Grado = "8º- Básico";
+            } else if (item.Grado == "Nivel Medio Mayor") {
+                item.Grado = "Inicial 3 años";
+            } else if (item.Grado == "Nivel Medio Menor") {
+                item.Grado = "Inicial 2 años";
+            } else if (item.Grado == "1er nivel de Transición (Pre-kinder)") {
+                item.Grado = "Prekinder";
+            } else if (item.Grado == "2° nivel de Transición (Kinder)") {
+                item.Grado = "Kinder";
+
 
             } else {
                 item.Grado = "pendiente";
